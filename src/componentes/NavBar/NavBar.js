@@ -1,4 +1,4 @@
-import { FaShoppingCart } from 'react-icons/fa'
+import CartWidget from "../CartWidget/CartWidget"
 
 const articulos = [
     'Kits',
@@ -12,9 +12,7 @@ const NavBar = () => {
     return (
         <nav className="flex justify-between p-4 border-b items-center">
             <h1 className="font-bold">Golf Supplies</h1>
-            <div className='cartWidget flex ml-auto pr-4 '>
-                <button><FaShoppingCart/></button>
-            </div>
+            <CartWidget/>
             <ul className="flex">
                 
                 {articulos.map(value => (
