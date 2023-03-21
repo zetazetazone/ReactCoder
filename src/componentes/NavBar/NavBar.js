@@ -17,7 +17,7 @@ const NavBar = () => {
             <ul className="flex">
                 
                 {category.map(value => (
-                    <li className="p-1"> <NavLink to='/category/:${value}' className={({ isActive }) => isActive ? 'ActiveLink' : 'Link'}>{value}</NavLink></li>
+                    <li className="p-1"> <NavLink to={`/category/${value}`} className={({ isActive }) => isActive ? 'ActiveLink' : 'Link'}>{value}</NavLink></li>
                 ))}
             </ul>
         </nav>
