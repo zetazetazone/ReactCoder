@@ -18,7 +18,7 @@ const NavBar = () => {
                 
                 {category.map(value => (
                     <li className="p-1" key={value}>
-                       <NavLink to={`/ReactCoder/category/${value}`} className={({ isActive }) => isActive ? 'ActiveLink' : 'Link'}>{value}</NavLink></li>
+                       <NavLink to={`/category/${value}`} className={({ isActive }) => isActive ? 'ActiveLink' : 'Link'}>{value}</NavLink></li>
                 ))}
             </ul>
         </nav>
