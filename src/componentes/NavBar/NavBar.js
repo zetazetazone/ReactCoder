@@ -1,5 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget"
-
+import { Link, NavLink } from 'react-router-dom'
 
 const category = [
     'Kits',
@@ -17,7 +17,7 @@ const NavBar = () => {
             <ul className="flex">
                 
                 {category.map(value => (
-                    <li className="p-1"><button>{value}</button></li>
+                    <li className="p-1"> <NavLink to='/category/:${value}' className={({ isActive }) => isActive ? 'ActiveLink' : 'Link'}>{value}</NavLink></li>
                 ))}
             </ul>
         </nav>
