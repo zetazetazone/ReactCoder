@@ -1,6 +1,7 @@
 import CartWidget from "../CartWidget/CartWidget"
 
-const articulos = [
+
+const category = [
     'Kits',
     'Palos',
     'Bolsas',
@@ -15,7 +16,7 @@ const NavBar = () => {
             <CartWidget/>
             <ul className="flex">
                 
-                {articulos.map(value => (
+                {category.map(value => (
                     <li className="p-1"><button>{value}</button></li>
                 ))}
             </ul>
