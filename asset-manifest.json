@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ReactCoder/static/css/main.7b959eeb.css",
-    "main.js": "/ReactCoder/static/js/main.dbeb87e4.js",
+    "main.css": "/ReactCoder/static/css/main.60084373.css",
+    "main.js": "/ReactCoder/static/js/main.1b922bd4.js",
     "static/js/787.9568b9b0.chunk.js": "/ReactCoder/static/js/787.9568b9b0.chunk.js",
     "index.html": "/ReactCoder/index.html",
-    "main.7b959eeb.css.map": "/ReactCoder/static/css/main.7b959eeb.css.map",
-    "main.dbeb87e4.js.map": "/ReactCoder/static/js/main.dbeb87e4.js.map",
+    "main.60084373.css.map": "/ReactCoder/static/css/main.60084373.css.map",
+    "main.1b922bd4.js.map": "/ReactCoder/static/js/main.1b922bd4.js.map",
     "787.9568b9b0.chunk.js.map": "/ReactCoder/static/js/787.9568b9b0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b959eeb.css",
-    "static/js/main.dbeb87e4.js"
+    "static/css/main.60084373.css",
+    "static/js/main.1b922bd4.js"
   ]
 }
