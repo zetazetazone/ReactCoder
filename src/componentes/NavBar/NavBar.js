@@ -12,7 +12,10 @@ const category = [
 const NavBar = () => {
     return (
         <nav className="flex justify-between p-4 border-b items-center">
-            <h1 className="font-bold">Golf Supplies</h1>
+            <NavLink to={`/`} className={({ isActive }) => isActive ? 'ActiveLink' : 'Link'}>
+                <h1 className="font-bold">Golf Supplies</h1>
+            </NavLink>
+            
             <CartWidget/>
             <ul className="flex">
                 
