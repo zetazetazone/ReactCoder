@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 
 const ItemDescription = ({ name, price, description }) => {
   return (
@@ -12,10 +13,10 @@ const ItemDescription = ({ name, price, description }) => {
         <p>previous price tachado</p>
         <div>
             <div>
-                <button>-</button>
-                <span>0</span>
-                <button>+</button>
-                <button>Add to cart</button>
+              <Button variant="contained" className='bg-black pl-0 pr-0 mr-2'>-</Button>
+              <span>0</span>
+              <Button variant="contained" className='bg-black pl-0 pr-0 mr-2'>+</Button>
+              <Button variant="contained" className='bg-black '>Add to cart</Button>
             </div>
         </div>
     </section>
