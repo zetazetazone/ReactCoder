@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { Button } from '@mui/material'
 
 
 const Counter = (props) => {
     const [count, setCount] = useState(props.initial)
     const [message, setMessage] = useState('')
+    console.log(props.initial)
 
     const decrement = () => {
         setMessage('')
@@ -33,9 +35,9 @@ const Counter = (props) => {
             <h1>{props.title}</h1>
             <h2>{count}</h2>
             <h3>Cantidad disponible: {props.stock}</h3>
-            <Button label="restar" handleClick={decrement}/>
-            <Button label="sumar" handleClick={increment}/>
-            <Button label="reiniciar" handleClick={reset}/>
+            <Button label="restar" onClick={decrement}/>
+            <Button label="sumar" onClick={increment}/>
+            <Button label="reiniciar" onClick={reset}/>
             {/* <button onClick={decrement}>restar</button>
             <button onClick={increment}>sumar</button>
             <button onClick={reset}>reiniciar</button> */}
