@@ -5,13 +5,11 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer = ({ greeting }) => {
     const [productsState, setProductsState] = useState([])
-    const [loading, setLoading] = useState(true)
+    
     const { categoryId } = useParams()
 
-    console.log(productsState)
-
     useEffect(() => {
-        setLoading(true)
+    
         const asyncFunction = categoryId ? getProductsByCategory : getProducts
 
         asyncFunction(categoryId)
@@ -21,14 +19,7 @@ const ItemListContainer = ({ greeting }) => {
             .catch(error => {
                 console.log(error)
             })
-            .finally(() => {
-                setLoading(false)
-            })
     }, [categoryId])
-
-    if(loading) {
-        return <h1>Cargando...</h1>
-    }
 
     if(productsState && productsState.length === 0) {
         return <h1>No hay productos</h1>
@@ -38,7 +29,6 @@ const ItemListContainer = ({ greeting }) => {
         <div>
             <h1>{greeting}</h1>
             <ItemList products={productsState}/>
-           
         </div>
     )
 }
