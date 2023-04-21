@@ -1,7 +1,7 @@
 import ItemCount from '../ItemCount/ItemCount';
 import { useState , useContext} from 'react'
 import { Button } from '@mui/material';
-import { CartContext } from '../../App'
+import { CartContext } from '../../Context/CartContext'
 import { Link } from 'react-router-dom';
 
 
