@@ -11,19 +11,33 @@ export const CartProvider = ({ children }) => {
         }
         else{
           console.log('El producto ya esta agregado')
-          console.log(cart) 
+          console.log(cart)
         }
       }
 
     const isInCart = (id) => {
-    return cart.some(prod => prod.id === id)
+        return cart.some(prod => prod.id === id)
     }
     
     console.log(cart) 
-      
+    
+    const removeItem = (id) => {
+        const cartUpdated = cart.filter(prod => prod.id !== id) 
+        setCart(cartUpdated)
+    }
+
+    const getTotalQuantity = () => {
+        let totalQuantity = 0
+        cart.forEach(prod => {
+            totalQuantity += prod.quantity
+        })
+        return totalQuantity
+    }
+
+    const totalQuantity = getTotalQuantity()
 
     return(      
-        <CartContext.Provider value={{cart, addItem}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, totalQuantity}}>
             { children }
         </CartContext.Provider>
     )

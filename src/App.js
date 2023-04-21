@@ -3,15 +3,15 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer'
 import NavBar from './componentes/NavBar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { CartProvider} from './Context/CartContext'
+import { CartProvider } from './Context/CartContext'
 
 
 const App = () => {
 
 return (
-    <div>
-      <CartProvider>
-        <BrowserRouter>
+    <div>  
+      <BrowserRouter>
+        <CartProvider>
           <NavBar />
           <Routes>
             <Route path='/' element={<ItemListContainer greeting={'Todos nuestros productos'} />} />
@@ -20,8 +20,8 @@ return (
             <Route path='/category/:categoryId/subcategory/:subcategoryId' element={<ItemListContainer greeting={'Productos filtrados por categoria'} />} />
             <Route path='/item/:itemId' element={<ItemDetailContainer />} />
           </Routes>
-        </BrowserRouter>
-      </CartProvider>
+        </CartProvider>
+      </BrowserRouter>
     </div>
   );
 }
